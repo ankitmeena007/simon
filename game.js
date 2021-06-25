@@ -18,6 +18,10 @@ var level = 0;
     })
 
   $(".restart").click(function() {
+       $(".restart").addClass("pressed");
+       setTimeout(function () {
+         $(".restart").removeClass("pressed");
+       }, 100);
        if (game_started == 0) {
 
             game_started = 1;
@@ -53,6 +57,25 @@ function checkAnswer(currentLevel) {
       }, 1000);
     }
   }
+
+
+
+
+  else if (userClickedPattern.length>gamePattern.length){
+
+    $("body").addClass("game-over");
+    $("#level-title").html("oops! more buttons used than required<br>Press Any Key to Restart");
+
+    setTimeout(function () {
+      $("body").removeClass("game-over");
+    }, 200);
+
+
+    $("level-title").html("Restarting...");
+    startOver();
+
+  }
+
 
 
   else {
