@@ -17,13 +17,17 @@ var level = 0;
 
     })
 
-  $(document).click(function() {
+  $(".restart").click(function() {
        if (game_started == 0) {
-         game_started = 1;
-         $("#level-title").text("Level " + level);
 
-         nextSequence();
-       }
+            game_started = 1;
+            $("#level-title").text("Level " + level);
+            nextSequence();
+        }
+        else {
+          $("#level-title").html("Press Any Key to Start");
+          startOver();
+        }
 
      })
 
