@@ -64,7 +64,7 @@ function checkAnswer(currentLevel) {
   else if (userClickedPattern.length>gamePattern.length){
 
     $("body").addClass("game-over");
-    $("#level-title").html("oops! more buttons used than required<br>Press Any Key to Restart");
+    $("#level-title").html("oops! more buttons used than required<br>Press Start Over to Restart");
 
     setTimeout(function () {
       $("body").removeClass("game-over");
