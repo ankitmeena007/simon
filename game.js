@@ -6,17 +6,26 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var game_started = 0;
 var level = 0;
 //-------------------------------------------------
-$(document).keypress(function() {
-  if (game_started == 0) {
-    game_started = 1;
-    $("#level-title").text("Level " + level);
 
-    nextSequence();
+  $(document).keypress(function() {
+      if (game_started == 0) {
+        game_started = 1;
+        $("#level-title").text("Level " + level);
 
+        nextSequence();
+      }
 
-  }
+    })
 
-})
+  $(document).click(function() {
+       if (game_started == 0) {
+         game_started = 1;
+         $("#level-title").text("Level " + level);
+
+         nextSequence();
+       }
+
+     })
 
 $(".btn").click(function() {
   var userChosenColour = $(this).attr("id");
