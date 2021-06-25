@@ -51,3 +51,16 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
+.restart{
+  background-color: black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5% auto;
+  color: #FEF2BF;
+  display: block;
+  height: 100px;
+  width: 400px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
